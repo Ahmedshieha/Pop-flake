@@ -17,6 +17,8 @@
 		FA918DC6284432F90082A0D9 /* Pop_flakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA918DC5284432F90082A0D9 /* Pop_flakeUITests.swift */; };
 		FA918DC8284432F90082A0D9 /* Pop_flakeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA918DC7284432F90082A0D9 /* Pop_flakeUITestsLaunchTests.swift */; };
 		FA918DD6284435860082A0D9 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA918DD5284435860082A0D9 /* Movie.swift */; };
+		FA918DD928443A580082A0D9 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA918DD828443A580082A0D9 /* Parser.swift */; };
+		FA918DDC28443A7B0082A0D9 /* URLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA918DDB28443A7B0082A0D9 /* URLS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		FA918DC5284432F90082A0D9 /* Pop_flakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pop_flakeUITests.swift; sourceTree = "<group>"; };
 		FA918DC7284432F90082A0D9 /* Pop_flakeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pop_flakeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FA918DD5284435860082A0D9 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		FA918DD828443A580082A0D9 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		FA918DDB28443A7B0082A0D9 /* URLS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 		FA918DA3284432F60082A0D9 /* Pop-flake */ = {
 			isa = PBXGroup;
 			children = (
+				FA918DDA28443A6C0082A0D9 /* Helper */,
+				FA918DD7284439F90082A0D9 /* ViewModel */,
 				FA918DD4284434180082A0D9 /* Model */,
 				FA918DA4284432F60082A0D9 /* AppDelegate.swift */,
 				FA918DA6284432F60082A0D9 /* SceneDelegate.swift */,
@@ -136,6 +142,22 @@
 				FA918DD5284435860082A0D9 /* Movie.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FA918DD7284439F90082A0D9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA918DD828443A580082A0D9 /* Parser.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA918DDA28443A6C0082A0D9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FA918DDB28443A7B0082A0D9 /* URLS.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +292,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA918DA9284432F60082A0D9 /* ViewController.swift in Sources */,
+				FA918DDC28443A7B0082A0D9 /* URLS.swift in Sources */,
 				FA918DA5284432F60082A0D9 /* AppDelegate.swift in Sources */,
+				FA918DD928443A580082A0D9 /* Parser.swift in Sources */,
 				FA918DD6284435860082A0D9 /* Movie.swift in Sources */,
 				FA918DA7284432F60082A0D9 /* SceneDelegate.swift in Sources */,
 			);
