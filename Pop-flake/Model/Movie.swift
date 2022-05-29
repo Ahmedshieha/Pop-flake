@@ -34,12 +34,16 @@ struct Item: Codable {
     let directorList: [RList]
     let stars: String
     let starList: [RList]
+    let rank : String
+    let crew : String
+    
     
     enum CodingKeys: String, CodingKey {
         case id, title, fullTitle, year, releaseState, image, runtimeMins, runtimeStr, plot, contentRating
         case imDBRating = "imDbRating"
         case imDBRatingCount = "imDbRatingCount"
         case metacriticRating, genres, genreList, directors, directorList, stars, starList
+        case rank , crew
     }
 }
 
