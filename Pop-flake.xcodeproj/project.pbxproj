@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA918DA5284432F60082A0D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA918DA4284432F60082A0D9 /* AppDelegate.swift */; };
+		FA918DA7284432F60082A0D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA918DA6284432F60082A0D9 /* SceneDelegate.swift */; };
+		FA918DA9284432F60082A0D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA918DA8284432F60082A0D9 /* ViewController.swift */; };
+		FA918DAC284432F60082A0D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA918DAA284432F60082A0D9 /* Main.storyboard */; };
+		FA918DAE284432F80082A0D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA918DAD284432F80082A0D9 /* Assets.xcassets */; };
+		FA918DB1284432F80082A0D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA918DAF284432F80082A0D9 /* LaunchScreen.storyboard */; };
+		FA918DBC284432F90082A0D9 /* Pop_flakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA918DBB284432F90082A0D9 /* Pop_flakeTests.swift */; };
+		FA918DC6284432F90082A0D9 /* Pop_flakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA918DC5284432F90082A0D9 /* Pop_flakeUITests.swift */; };
+		FA918DC8284432F90082A0D9 /* Pop_flakeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA918DC7284432F90082A0D9 /* Pop_flakeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA918DB8284432F90082A0D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA918D99284432F60082A0D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA918DA0284432F60082A0D9;
+			remoteInfo = "Pop-flake";
+		};
+		FA918DC2284432F90082A0D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA918D99284432F60082A0D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA918DA0284432F60082A0D9;
+			remoteInfo = "Pop-flake";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA918DA1284432F60082A0D9 /* Pop-flake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pop-flake.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA918DA4284432F60082A0D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA918DA6284432F60082A0D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA918DA8284432F60082A0D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA918DAB284432F60082A0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA918DAD284432F80082A0D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA918DB0284432F80082A0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA918DB2284432F80082A0D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA918DB7284432F90082A0D9 /* Pop-flakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pop-flakeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA918DBB284432F90082A0D9 /* Pop_flakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pop_flakeTests.swift; sourceTree = "<group>"; };
+		FA918DC1284432F90082A0D9 /* Pop-flakeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pop-flakeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA918DC5284432F90082A0D9 /* Pop_flakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pop_flakeUITests.swift; sourceTree = "<group>"; };
+		FA918DC7284432F90082A0D9 /* Pop_flakeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pop_flakeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA918D9E284432F60082A0D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA918DB4284432F90082A0D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA918DBE284432F90082A0D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA918D98284432F60082A0D9 = {
+			isa = PBXGroup;
+			children = (
+				FA918DA3284432F60082A0D9 /* Pop-flake */,
+				FA918DBA284432F90082A0D9 /* Pop-flakeTests */,
+				FA918DC4284432F90082A0D9 /* Pop-flakeUITests */,
+				FA918DA2284432F60082A0D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA918DA2284432F60082A0D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA918DA1284432F60082A0D9 /* Pop-flake.app */,
+				FA918DB7284432F90082A0D9 /* Pop-flakeTests.xctest */,
+				FA918DC1284432F90082A0D9 /* Pop-flakeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA918DA3284432F60082A0D9 /* Pop-flake */ = {
+			isa = PBXGroup;
+			children = (
+				FA918DA4284432F60082A0D9 /* AppDelegate.swift */,
+				FA918DA6284432F60082A0D9 /* SceneDelegate.swift */,
+				FA918DA8284432F60082A0D9 /* ViewController.swift */,
+				FA918DAA284432F60082A0D9 /* Main.storyboard */,
+				FA918DAD284432F80082A0D9 /* Assets.xcassets */,
+				FA918DAF284432F80082A0D9 /* LaunchScreen.storyboard */,
+				FA918DB2284432F80082A0D9 /* Info.plist */,
+			);
+			path = "Pop-flake";
+			sourceTree = "<group>";
+		};
+		FA918DBA284432F90082A0D9 /* Pop-flakeTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA918DBB284432F90082A0D9 /* Pop_flakeTests.swift */,
+			);
+			path = "Pop-flakeTests";
+			sourceTree = "<group>";
+		};
+		FA918DC4284432F90082A0D9 /* Pop-flakeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA918DC5284432F90082A0D9 /* Pop_flakeUITests.swift */,
+				FA918DC7284432F90082A0D9 /* Pop_flakeUITestsLaunchTests.swift */,
+			);
+			path = "Pop-flakeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA918DA0284432F60082A0D9 /* Pop-flake */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA918DCB284432F90082A0D9 /* Build configuration list for PBXNativeTarget "Pop-flake" */;
+			buildPhases = (
+				FA918D9D284432F60082A0D9 /* Sources */,
+				FA918D9E284432F60082A0D9 /* Frameworks */,
+				FA918D9F284432F60082A0D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pop-flake";
+			productName = "Pop-flake";
+			productReference = FA918DA1284432F60082A0D9 /* Pop-flake.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA918DB6284432F90082A0D9 /* Pop-flakeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA918DCE284432F90082A0D9 /* Build configuration list for PBXNativeTarget "Pop-flakeTests" */;
+			buildPhases = (
+				FA918DB3284432F90082A0D9 /* Sources */,
+				FA918DB4284432F90082A0D9 /* Frameworks */,
+				FA918DB5284432F90082A0D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA918DB9284432F90082A0D9 /* PBXTargetDependency */,
+			);
+			name = "Pop-flakeTests";
+			productName = "Pop-flakeTests";
+			productReference = FA918DB7284432F90082A0D9 /* Pop-flakeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA918DC0284432F90082A0D9 /* Pop-flakeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA918DD1284432F90082A0D9 /* Build configuration list for PBXNativeTarget "Pop-flakeUITests" */;
+			buildPhases = (
+				FA918DBD284432F90082A0D9 /* Sources */,
+				FA918DBE284432F90082A0D9 /* Frameworks */,
+				FA918DBF284432F90082A0D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA918DC3284432F90082A0D9 /* PBXTargetDependency */,
+			);
+			name = "Pop-flakeUITests";
+			productName = "Pop-flakeUITests";
+			productReference = FA918DC1284432F90082A0D9 /* Pop-flakeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA918D99284432F60082A0D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					FA918DA0284432F60082A0D9 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					FA918DB6284432F90082A0D9 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = FA918DA0284432F60082A0D9;
+					};
+					FA918DC0284432F90082A0D9 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = FA918DA0284432F60082A0D9;
+					};
+				};
+			};
+			buildConfigurationList = FA918D9C284432F60082A0D9 /* Build configuration list for PBXProject "Pop-flake" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA918D98284432F60082A0D9;
+			productRefGroup = FA918DA2284432F60082A0D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA918DA0284432F60082A0D9 /* Pop-flake */,
+				FA918DB6284432F90082A0D9 /* Pop-flakeTests */,
+				FA918DC0284432F90082A0D9 /* Pop-flakeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA918D9F284432F60082A0D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA918DB1284432F80082A0D9 /* LaunchScreen.storyboard in Resources */,
+				FA918DAE284432F80082A0D9 /* Assets.xcassets in Resources */,
+				FA918DAC284432F60082A0D9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA918DB5284432F90082A0D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA918DBF284432F90082A0D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA918D9D284432F60082A0D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA918DA9284432F60082A0D9 /* ViewController.swift in Sources */,
+				FA918DA5284432F60082A0D9 /* AppDelegate.swift in Sources */,
+				FA918DA7284432F60082A0D9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA918DB3284432F90082A0D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA918DBC284432F90082A0D9 /* Pop_flakeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA918DBD284432F90082A0D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA918DC8284432F90082A0D9 /* Pop_flakeUITestsLaunchTests.swift in Sources */,
+				FA918DC6284432F90082A0D9 /* Pop_flakeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA918DB9284432F90082A0D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA918DA0284432F60082A0D9 /* Pop-flake */;
+			targetProxy = FA918DB8284432F90082A0D9 /* PBXContainerItemProxy */;
+		};
+		FA918DC3284432F90082A0D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA918DA0284432F60082A0D9 /* Pop-flake */;
+			targetProxy = FA918DC2284432F90082A0D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA918DAA284432F60082A0D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA918DAB284432F60082A0D9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA918DAF284432F80082A0D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA918DB0284432F80082A0D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA918DC9284432F90082A0D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA918DCA284432F90082A0D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA918DCC284432F90082A0D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3UA7J8M967;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pop-flake/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AhmedReda.Pop-flake";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA918DCD284432F90082A0D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3UA7J8M967;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pop-flake/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AhmedReda.Pop-flake";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA918DCF284432F90082A0D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3UA7J8M967;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AhmedReda.Pop-flakeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pop-flake.app/Pop-flake";
+			};
+			name = Debug;
+		};
+		FA918DD0284432F90082A0D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3UA7J8M967;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AhmedReda.Pop-flakeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pop-flake.app/Pop-flake";
+			};
+			name = Release;
+		};
+		FA918DD2284432F90082A0D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3UA7J8M967;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AhmedReda.Pop-flakeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Pop-flake";
+			};
+			name = Debug;
+		};
+		FA918DD3284432F90082A0D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3UA7J8M967;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AhmedReda.Pop-flakeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Pop-flake";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA918D9C284432F60082A0D9 /* Build configuration list for PBXProject "Pop-flake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA918DC9284432F90082A0D9 /* Debug */,
+				FA918DCA284432F90082A0D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA918DCB284432F90082A0D9 /* Build configuration list for PBXNativeTarget "Pop-flake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA918DCC284432F90082A0D9 /* Debug */,
+				FA918DCD284432F90082A0D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA918DCE284432F90082A0D9 /* Build configuration list for PBXNativeTarget "Pop-flakeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA918DCF284432F90082A0D9 /* Debug */,
+				FA918DD0284432F90082A0D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA918DD1284432F90082A0D9 /* Build configuration list for PBXNativeTarget "Pop-flakeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA918DD2284432F90082A0D9 /* Debug */,
+				FA918DD3284432F90082A0D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA918D99284432F60082A0D9 /* Project object */;
+}
