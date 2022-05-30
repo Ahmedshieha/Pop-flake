@@ -15,5 +15,9 @@ class HomeCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func configureCell(movies : Movies){
+        self.movieLable.text = movies.title
+    }
 
 }

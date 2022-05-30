@@ -73,7 +73,7 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "tableViewCell")
-        tableView.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellReuseIdentifier: "collectioViewCell")
+        
     }
     
     
@@ -81,13 +81,13 @@ class HomeViewController: UIViewController {
 }
 extension HomeViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies.count
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! HomeTableViewCell
         cell.backgroundColor = .white
-        cell.movieLable.text = movies[indexPath.row].title
+//        cell.movieLable.text = movies[indexPath.row].title
         
         return cell 
         

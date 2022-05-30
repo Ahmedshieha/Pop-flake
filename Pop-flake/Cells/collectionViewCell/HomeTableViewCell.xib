@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,26 +17,36 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOQ-dy-chp">
-                        <rect key="frame" x="74" y="29" width="173" height="51"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="r0d-Si-q3G">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nyC-0M-AuA">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="aOQ-dy-chp" secondAttribute="trailing" constant="73" id="24h-gX-J9V"/>
-                    <constraint firstItem="aOQ-dy-chp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="74" id="2a9-a4-Sax"/>
-                    <constraint firstAttribute="bottom" secondItem="aOQ-dy-chp" secondAttribute="bottom" constant="28" id="9f6-It-YGp"/>
-                    <constraint firstItem="aOQ-dy-chp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="29" id="hic-5q-qtc"/>
+                    <constraint firstItem="r0d-Si-q3G" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8FW-Fo-Xk6"/>
+                    <constraint firstItem="r0d-Si-q3G" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Gh0-ev-zWa"/>
+                    <constraint firstAttribute="trailing" secondItem="r0d-Si-q3G" secondAttribute="trailing" id="dJg-Oq-aTa"/>
+                    <constraint firstAttribute="bottom" secondItem="r0d-Si-q3G" secondAttribute="bottom" id="zuT-2M-uSG"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" red="0.92519974709999997" green="0.41607719659999998" blue="0.4274258614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <connections>
-                <outlet property="movieLable" destination="aOQ-dy-chp" id="p8z-ru-Y5W"/>
+                <outlet property="collectionView" destination="r0d-Si-q3G" id="A0H-2b-mdQ"/>
             </connections>
             <point key="canvasLocation" x="133.33333333333334" y="50.892857142857139"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
