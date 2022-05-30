@@ -29,7 +29,7 @@ struct Parser {
             }
 
         } .resume()
-    } 
+   }  
     
     func fetchTopMovies (_ comp : @escaping (Movie? , Error?)->()) {
         let api = URL(string: UrlsApi.topMovieApi.rawValue)
