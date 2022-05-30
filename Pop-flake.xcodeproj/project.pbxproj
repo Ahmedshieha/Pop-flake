@@ -12,6 +12,7 @@
 		FA652FFD2844F7B700E538C9 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA652FFB2844F7B700E538C9 /* HomeTableViewCell.swift */; };
 		FA652FFE2844F7B700E538C9 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA652FFC2844F7B700E538C9 /* HomeTableViewCell.xib */; };
 		FA6530002844F94800E538C9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA652FFF2844F94800E538C9 /* HomeViewController.swift */; };
+		FA8C26202845755D005D8148 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C261F2845755D005D8148 /* Extension.swift */; };
 		FA918DA5284432F60082A0D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA918DA4284432F60082A0D9 /* AppDelegate.swift */; };
 		FA918DA7284432F60082A0D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA918DA6284432F60082A0D9 /* SceneDelegate.swift */; };
 		FA918DA9284432F60082A0D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA918DA8284432F60082A0D9 /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 		FA652FFB2844F7B700E538C9 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		FA652FFC2844F7B700E538C9 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		FA652FFF2844F94800E538C9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FA8C261F2845755D005D8148 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		FA918DA1284432F60082A0D9 /* Pop-flake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pop-flake.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA918DA4284432F60082A0D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA918DA6284432F60082A0D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				FA918DDB28443A7B0082A0D9 /* URLS.swift */,
+				FA8C261F2845755D005D8148 /* Extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				FA918DA5284432F60082A0D9 /* AppDelegate.swift in Sources */,
 				FA918DD928443A580082A0D9 /* Parser.swift in Sources */,
 				FA918DD6284435860082A0D9 /* DataModel.swift in Sources */,
+				FA8C26202845755D005D8148 /* Extension.swift in Sources */,
 				FA6530002844F94800E538C9 /* HomeViewController.swift in Sources */,
 				FA652FFD2844F7B700E538C9 /* HomeTableViewCell.swift in Sources */,
 				FA918DA7284432F60082A0D9 /* SceneDelegate.swift in Sources */,

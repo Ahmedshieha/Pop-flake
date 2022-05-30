@@ -24,10 +24,20 @@ class HomeViewController: UIViewController {
 
         configureTableViewCell()
         getTopMovies()
-        getCommingSoonMovies()
-        getInTheatersMovies()
+//        getCommingSoonMovies()
+//        getInTheatersMovies()
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
     }
     
+    
+    
+    func configureTableViewCell () {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "tableViewCell")
+        
+    }
     
     
     private func getTopMovies() {
@@ -72,17 +82,6 @@ class HomeViewController: UIViewController {
     }
     
     
-    
-    
-    func configureTableViewCell () {
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "tableViewCell")
-        
-    }
-    
-    
-    
 }
 extension HomeViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -108,11 +107,9 @@ extension HomeViewController : UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.bounds.height/4
+        return 400
     }
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 70
-    }
+    
     
 //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 //        let headerView = UIView()

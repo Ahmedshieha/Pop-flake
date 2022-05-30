@@ -35,7 +35,7 @@ struct Parser {
         let api = URL(string: UrlsApi.topMovieApi.rawValue)
         ftechMovies(url: api!) { movies, error in
             comp(movies,error)
-        }
+        } 
     }
     
 

@@ -47,6 +47,7 @@ class HomeTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "collectioViewCell", for: indexPath) as! HomeCollectionViewCell
         cell.configureCell(movies: movies[indexPath.row])
+       
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
