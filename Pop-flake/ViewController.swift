@@ -8,12 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  let parser = Parser()
+    
+    var movieList : [Movie] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
-
-}
+    
+    
+ 
+ }
 
