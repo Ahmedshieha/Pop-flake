@@ -43,14 +43,33 @@
         <!--Home-->
         <scene sceneID="uxC-V4-ap3">
             <objects>
-                <viewController id="IwC-GJ-aiU" sceneMemberID="viewController">
+                <viewController id="IwC-GJ-aiU" customClass="HomeViewController" customModule="Pop_flake" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XYE-Ga-ESL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IiQ-CM-FaS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="IwC-GJ-aiU" id="unz-lP-hzc"/>
+                                    <outlet property="delegate" destination="IwC-GJ-aiU" id="6KQ-xj-T8D"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="m9i-nH-HN4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IiQ-CM-FaS" firstAttribute="top" secondItem="m9i-nH-HN4" secondAttribute="top" id="JKO-kT-7cr"/>
+                            <constraint firstItem="m9i-nH-HN4" firstAttribute="bottom" secondItem="IiQ-CM-FaS" secondAttribute="bottom" id="b4X-Pj-37w"/>
+                            <constraint firstItem="m9i-nH-HN4" firstAttribute="trailing" secondItem="IiQ-CM-FaS" secondAttribute="trailing" id="hd9-E2-UjF"/>
+                            <constraint firstItem="IiQ-CM-FaS" firstAttribute="leading" secondItem="m9i-nH-HN4" secondAttribute="leading" id="ssd-nB-SgO"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="oFa-cD-rCd"/>
+                    <connections>
+                        <outlet property="tableView" destination="IiQ-CM-FaS" id="dRw-QG-aPN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OEU-Ud-Gvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

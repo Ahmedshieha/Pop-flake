@@ -8,13 +8,13 @@
 import Foundation
 
 // MARK: - Welcome
-struct Movie: Codable {
-    let items: [Item]
+struct DataModel: Codable {
+    let items: [Movies]
     let errorMessage: String
 }
 
 // MARK: - Item
-struct Item: Codable {
+struct Movies: Codable {
     let id : String?
     let title : String?
     let fullTitle : String?

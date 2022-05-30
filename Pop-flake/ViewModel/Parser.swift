@@ -11,7 +11,7 @@ import Foundation
 struct Parser {
     
     
-   private func ftechMovies (url :URL , completion : @escaping (Movie? , Error?) -> ()) {
+   private func ftechMovies (url :URL , completion : @escaping ([Movies]? , Error?) -> ()) {
        URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
                 completion(nil,error)
@@ -21,8 +21,8 @@ struct Parser {
                 return
             }
             do {
-                let movie = try JSONDecoder().decode(Movie.self, from: data)
-                completion(movie, nil)
+                let data = try JSONDecoder().decode(DataModel.self, from: data)
+                completion(data.items, nil)
                 
             } catch (let error) {
                 completion(nil, error)
@@ -31,14 +31,16 @@ struct Parser {
         } .resume()
    }  
     
-    func fetchTopMovies (_ comp : @escaping (Movie? , Error?)->()) {
+    func fetchTopMovies (_ comp : @escaping ([Movies]? , Error?)->()) {
         let api = URL(string: UrlsApi.topMovieApi.rawValue)
         ftechMovies(url: api!) { movies, error in
             comp(movies,error)
         }
     }
     
-    func fetchComingSoonMovies (_ comp : @escaping (Movie? , Error?)->()) {
+
+    
+    func fetchComingSoonMovies (_ comp : @escaping ([Movies]? , Error?)->()) {
         let api = URL(string: UrlsApi.commingSoon.rawValue)
         ftechMovies(url: api!) { movies, error in
             comp(movies,error)
@@ -46,7 +48,7 @@ struct Parser {
     }
     
     
-    func fetchInTheatersMovies (_ comp : @escaping (Movie? , Error?)->()) {
+    func fetchInTheatersMovies (_ comp : @escaping ([Movies]? , Error?)->()) {
         let api = URL(string: UrlsApi.InInTheaters.rawValue)
         ftechMovies(url: api!) { movies, error in
             comp(movies,error)
