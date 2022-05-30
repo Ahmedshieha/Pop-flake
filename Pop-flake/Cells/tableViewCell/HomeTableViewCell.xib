@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="r0d-Si-q3G">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
+                        <rect key="frame" x="10" y="10" width="300" height="88"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nyC-0M-AuA">
                             <size key="itemSize" width="128" height="128"/>
@@ -30,14 +30,13 @@
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="r0d-Si-q3G" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8FW-Fo-Xk6"/>
-                    <constraint firstItem="r0d-Si-q3G" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Gh0-ev-zWa"/>
-                    <constraint firstAttribute="trailing" secondItem="r0d-Si-q3G" secondAttribute="trailing" id="dJg-Oq-aTa"/>
-                    <constraint firstAttribute="bottom" secondItem="r0d-Si-q3G" secondAttribute="bottom" id="zuT-2M-uSG"/>
+                    <constraint firstAttribute="bottom" secondItem="r0d-Si-q3G" secondAttribute="bottom" constant="10" id="9J2-qP-9SO"/>
+                    <constraint firstItem="r0d-Si-q3G" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ZFN-D3-bXM"/>
+                    <constraint firstAttribute="trailing" secondItem="r0d-Si-q3G" secondAttribute="trailing" constant="10" id="mFM-9e-EcT"/>
+                    <constraint firstItem="r0d-Si-q3G" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="nTc-q3-O8f"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <color key="backgroundColor" red="0.92519974709999997" green="0.41607719659999998" blue="0.4274258614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <connections>
                 <outlet property="collectionView" destination="r0d-Si-q3G" id="A0H-2b-mdQ"/>
             </connections>

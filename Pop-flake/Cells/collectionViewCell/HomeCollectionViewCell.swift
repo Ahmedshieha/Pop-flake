@@ -9,15 +9,16 @@ import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
 
-  
-    @IBOutlet weak var movieLable: UILabel!
+    @IBOutlet weak var MovieImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
     
     func configureCell(movies : Movies){
-        self.movieLable.text = movies.title
+        self.MovieImageView.image = UIImage(named: movies.image!)
+        
     }
 
 }

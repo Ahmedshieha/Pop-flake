@@ -9,10 +9,6 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
    
-    
-   
-    
-    
     var movies = [Movies]()
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -21,7 +17,18 @@ class HomeTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionVi
         super.awakeFromNib()
         // Initialization code
 //        backgroundColor = .red
-       
+       configureCollectionVIewCell()
+   
+    }
+    
+    func configure(with movies : [Movies]) {
+        self.movies = movies
+        collectionView.reloadData()
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8))
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

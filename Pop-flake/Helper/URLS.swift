@@ -9,7 +9,7 @@ import Foundation
 
 
 enum UrlsApi : String {
-    case topMovieApi = "https://imdb-api.com/en/API/Top250Movies/k_77btgszr"
-    case commingSoon = "https://imdb-api.com/en/API/ComingSoon/k_77btgszr"
-    case InInTheaters = "https://imdb-api.com/en/API/InTheaters/k_77btgszr"
+    case topMovieApi = "https://imdb-api.com/en/API/Top250Movies/k_84115lf2"
+    case commingSoon = "https://imdb-api.com/en/API/ComingSoon/k_84115lf2"
+    case InInTheaters = "https://imdb-api.com/en/API/InTheaters/k_84115lf2"
 }

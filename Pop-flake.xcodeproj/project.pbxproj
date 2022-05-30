@@ -121,8 +121,8 @@
 		FA652FF52844F77300E538C9 /* collectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				FA652FFB2844F7B700E538C9 /* HomeTableViewCell.swift */,
-				FA652FFC2844F7B700E538C9 /* HomeTableViewCell.xib */,
+				FA652FF72844F7A500E538C9 /* HomeCollectionViewCell.swift */,
+				FA652FF82844F7A500E538C9 /* HomeCollectionViewCell.xib */,
 			);
 			path = collectionViewCell;
 			sourceTree = "<group>";
@@ -130,8 +130,8 @@
 		FA652FF62844F77E00E538C9 /* tableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				FA652FF72844F7A500E538C9 /* HomeCollectionViewCell.swift */,
-				FA652FF82844F7A500E538C9 /* HomeCollectionViewCell.xib */,
+				FA652FFB2844F7B700E538C9 /* HomeTableViewCell.swift */,
+				FA652FFC2844F7B700E538C9 /* HomeTableViewCell.xib */,
 			);
 			path = tableViewCell;
 			sourceTree = "<group>";
