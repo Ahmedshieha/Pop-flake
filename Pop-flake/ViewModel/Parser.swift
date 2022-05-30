@@ -39,7 +39,7 @@ struct Parser {
     }
     
     func fetchComingSoonMovies (_ comp : @escaping (Movie? , Error?)->()) {
-        let api = URL(string: UrlsApi.topMovieApi.rawValue)
+        let api = URL(string: UrlsApi.commingSoon.rawValue)
         ftechMovies(url: api!) { movies, error in
             comp(movies,error)
         }
@@ -47,7 +47,7 @@ struct Parser {
     
     
     func fetchInTheatersMovies (_ comp : @escaping (Movie? , Error?)->()) {
-        let api = URL(string: UrlsApi.topMovieApi.rawValue)
+        let api = URL(string: UrlsApi.InInTheaters.rawValue)
         ftechMovies(url: api!) { movies, error in
             comp(movies,error)
         }
