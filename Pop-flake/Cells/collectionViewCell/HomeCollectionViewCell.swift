@@ -20,11 +20,11 @@ class HomeCollectionViewCell: UICollectionViewCell {
         self.MovieImageView.image = UIImage(named: movies.image!)
         
         guard let imageurl = URL(string: movies.image!) else {
-            return
+            return  
         }
-        print(imageurl)
         self.MovieImageView.image = nil
         getImageDataFrom(url: imageurl)
+        print(imageurl)
     }
     
     func configureTest () {

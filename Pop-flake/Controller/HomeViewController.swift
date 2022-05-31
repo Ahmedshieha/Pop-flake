@@ -21,13 +21,16 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-
         configureTableViewCell()
         getTopMovies()
-//        getCommingSoonMovies()
-//        getInTheatersMovies()
+        getCommingSoonMovies()
+        getInTheatersMovies()
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        
+      
     }
     
     
@@ -46,7 +49,6 @@ class HomeViewController: UIViewController {
                 print(error!)
             } else {
                 self.movies = data!
-                print(self.movies)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                     
@@ -107,7 +109,7 @@ extension HomeViewController : UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 400
+        return 250
     }
     
     
