@@ -37,5 +37,11 @@ class InTheatersMoviesViewModel {
         
         return inTheatersMovies[indexPath.row]
     }
+    func didSelect(indexPath : IndexPath) -> String  {
+        if inTheatersMovies[indexPath.row].id != nil {
+           return "https://www.imdb.com/title/\(inTheatersMovies[indexPath.row].id!)/?ref_=nv_sr_srsg_0"
+        }
+        return "https://www.imdb.com/title/?ref_=nv_sr_srsg_0"
+    }
     
 }

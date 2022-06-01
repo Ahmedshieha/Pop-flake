@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import SafariServices
+import AVFoundation
 class HomeViewController: UIViewController , UICollectionViewDataSource , UICollectionViewDelegate {
     
     let topMoviesViewModel = TopMoviesViewModel()
@@ -27,7 +28,6 @@ class HomeViewController: UIViewController , UICollectionViewDataSource , UIColl
 //        loadtopMovies()
 //        loadcommingSoonMovies()
 //        loadinTheatersMovies()
-        moviesCollectionView.backgroundColor = .black
         
     }
     
@@ -56,10 +56,6 @@ class HomeViewController: UIViewController , UICollectionViewDataSource , UIColl
         }
         
     }
-    
-    
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
@@ -94,6 +90,27 @@ class HomeViewController: UIViewController , UICollectionViewDataSource , UIColl
         
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if indexPath.section == 0 {
+            let url = topMoviesViewModel.didSelect(indexPath:indexPath)
+            let viewController = SFSafariViewController(url: URL(string: url)!)
+            present(viewController , animated: true)
+            
+        } else if indexPath.section == 1 {
+            let url = commingSoonViewModel.didSelect(indexPath:indexPath)
+            let viewController = SFSafariViewController(url: URL(string: url)!)
+            present(viewController , animated: true)
+        }
+        else if indexPath.section == 2 {
+        let url = inTheatersViewModel.didSelect(indexPath:indexPath)
+        let viewController = SFSafariViewController(url: URL(string: url)!)
+        present(viewController , animated: true)
+        }
+        
+    }
+    
      func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
          
          if indexPath.section == 0 {
@@ -122,8 +139,6 @@ class HomeViewController: UIViewController , UICollectionViewDataSource , UIColl
         }
         
     }
-    
-    
     
     func movieCellLayout () -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(200))

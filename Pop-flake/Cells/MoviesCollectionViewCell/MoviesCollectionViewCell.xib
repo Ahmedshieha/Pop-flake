@@ -16,13 +16,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="353" height="210"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shawshankTest" translatesAutoresizingMaskIntoConstraints="NO" id="eaP-CL-cfp">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eaP-CL-cfp">
                         <rect key="frame" x="5" y="5" width="90" height="200"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="90" id="Lwf-79-Nme"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKX-Zy-3kb">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKX-Zy-3kb">
                         <rect key="frame" x="100" y="16" width="228" height="33"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="33" id="DxS-6S-QLl"/>
@@ -32,7 +32,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PF6-4k-h2W">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PF6-4k-h2W">
                         <rect key="frame" x="100" y="161" width="228" height="33"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="33" id="5ou-PP-RUJ"/>
@@ -57,13 +57,10 @@
             <size key="customSize" width="353" height="210"/>
             <connections>
                 <outlet property="movieImageView" destination="eaP-CL-cfp" id="236-kc-eVj"/>
-                <outlet property="rateMovieLable" destination="PF6-4k-h2W" id="alY-Rn-wY6"/>
+                <outlet property="movieYear" destination="PF6-4k-h2W" id="alY-Rn-wY6"/>
                 <outlet property="titleMovieLable" destination="iKX-Zy-3kb" id="y7L-xT-bHK"/>
             </connections>
             <point key="canvasLocation" x="-307" y="92"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="shawshankTest" width="337" height="500"/>
-    </resources>
 </document>

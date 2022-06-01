@@ -36,5 +36,12 @@ class CommingSoonMoviesViewModel {
         
         return commingSoonMovies[indexPath.row]
     }
+    func didSelect(indexPath : IndexPath) -> String  {
+        if commingSoonMovies[indexPath.row].id != nil {
+           return "https://www.imdb.com/title/\(commingSoonMovies[indexPath.row].id!)/?ref_=nv_sr_srsg_0"
+        }
+        return "https://www.imdb.com/title/?ref_=nv_sr_srsg_0"
+    }
+    
     
 }

@@ -11,11 +11,12 @@ class MoviesCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var movieImageView: UIImageView!
     @IBOutlet weak var titleMovieLable: UILabel!
-    @IBOutlet weak var rateMovieLable: UILabel!
+    @IBOutlet weak var movieYear: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-
+        movieYear.textColor = .red
+        movieYear.font = UIFont.boldSystemFont(ofSize: 17)
     }
     
     func updateUI (imageUrl : String) {
@@ -28,6 +29,7 @@ class MoviesCollectionViewCell: UICollectionViewCell {
     
     func configure(movies : SearchMovies ) {
         titleMovieLable.text = movies.title
+        movieYear.text = movies.resultDescription
         updateUI(imageUrl: movies.image)
            
     }

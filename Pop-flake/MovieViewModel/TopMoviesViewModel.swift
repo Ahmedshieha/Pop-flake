@@ -6,7 +6,8 @@
 //
 
 import Foundation
-
+import UIKit
+import SafariServices
 
 class TopMoviesViewModel {
     
@@ -38,4 +39,10 @@ class TopMoviesViewModel {
         return topMovies[indexPath.row]
     }
     
+    func didSelect(indexPath : IndexPath) -> String  {
+        if topMovies[indexPath.row].id != nil {
+           return "https://www.imdb.com/title/\(topMovies[indexPath.row].id!)/?ref_=nv_sr_srsg_0"
+        }
+        return "https://www.imdb.com/title/?ref_=nv_sr_srsg_0"
+    }
 }

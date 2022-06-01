@@ -23,19 +23,19 @@ class SearchViewController: UIViewController,UITextFieldDelegate , UICollectionV
         searchTextFiels.delegate = self
         searchCollectionView.delegate = self
         searchCollectionView.dataSource = self
-
+        
+        searchTextFiels.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
         self.searchCollectionView.register(UINib(nibName: "MoviesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "moviesCollectionViewCell")
+        searchTextFiels.addTarget(self, action: #selector(searchMoviesTest(_:)), for: .editingDidEnd)
         searchCollectionView.collectionViewLayout = createCompostionalLayout()
     }
     
-    func searchMovies() {
-        searchTextFiels.resignFirstResponder()
-
-        guard let text = searchTextFiels.text , !text.isEmpty else {return}
-
-        movies.removeAll()
-        URLSession.shared.dataTask(with: URL(string: "https://imdb-api.com/en/API/SearchMovie/k_77btgszr/\(text)")!) { data, response, error in
+    
+    @objc func searchMoviesTest (_ textField: UITextField) {
+        self.movies.removeAll()
+        guard let url = URL(string: "https://imdb-api.com/en/API/SearchMovie/k_0jv5ry36/\(textField.text ?? "")") else {return}
+        URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data , error == nil else {
                 return
             }
@@ -52,58 +52,26 @@ class SearchViewController: UIViewController,UITextFieldDelegate , UICollectionV
             }
             let newMovies = finishResult.results
             self.movies.append(contentsOf: newMovies)
-
+            
             DispatchQueue.main.async {
-                self.searchCollectionView.reloadData()
+                
+                for movie in self.movies {
+                    print(movie.title)
+                }
+                
             }
 
         }.resume()
+        
+        
     }
-//    func ftechData ( completion : @escaping (Result<SearchData, Error>) -> Void) {
-//                searchTextFiels.resignFirstResponder()
-//
-//                guard let text = searchTextFiels.text , !text.isEmpty else {return}
-//
-//                movies.removeAll()
-//
-//        URLSession.shared.dataTask(with: URL(string: "https://imdb-api.com/en/API/SearchAll/k_77btgszr/inception")!) { (data, response, error) in
-//            if let error = error {
-//                completion(.failure(error))
-//                print(error)
-//                return
-//            }
-//            guard let response = response as? HTTPURLResponse else {
-//                return
-//            }
-//           print(response.statusCode)
-//
-//           guard let data = data else {
-//           print("Empty Data")
-//               return
-//           }
-//
-//            do {
-//                let jsonData = try JSONDecoder().decode(SearchData.self, from: data)
-//
-//                DispatchQueue.main.async {
-//                    completion(.success(jsonData))
-////                    print(jsonData.results.first?.title)
-//                }
-//            }
-//
-//                catch let error {
-//                completion(.failure(error))
-//            }
-//       }.resume()
-//   }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        searchMovies()
-//        ftechData { result in
-//
+   
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        searchTextFiels.resignFirstResponder()
+//            return true
 //        }
-        return true
-    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movies.count
     }
@@ -113,6 +81,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate , UICollectionV
         movieCell.configure(movies: movies[indexPath.row])
         return movieCell
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let url = "https://www.imdb.com/title/\(movies[indexPath.row].id)/?ref_=nv_sr_srsg_0"
         let viewController = SFSafariViewController(url:URL(string: url)!)
