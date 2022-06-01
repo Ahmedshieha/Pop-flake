@@ -83,7 +83,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate , UICollectionV
         
         let url = "https://www.imdb.com/title/\(movies[indexPath.row].id!)/?ref_=nv_sr_srsg_0"
         
-       let viewController = SFSafariViewController(url:URL(string: url)!)
+        let viewController = SFSafariViewController(url:URL(string: url)! )
         present(viewController ,animated: true)
     }
     
