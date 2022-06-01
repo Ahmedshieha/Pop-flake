@@ -24,9 +24,9 @@ class HomeViewController: UIViewController , UICollectionViewDataSource , UIColl
         
         // Do any additional setup after loading the view.
         configureCollectionViewAndCells()
-        loadtopMovies()
-        loadcommingSoonMovies()
-        loadinTheatersMovies()
+//        loadtopMovies()
+//        loadcommingSoonMovies()
+//        loadinTheatersMovies()
         moviesCollectionView.backgroundColor = .black
         
     }

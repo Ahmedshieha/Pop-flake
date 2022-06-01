@@ -30,6 +30,7 @@
 		FAC87CE02846C83900A8A6D8 /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC87CDE2846C83900A8A6D8 /* MoviesCollectionViewCell.swift */; };
 		FAC87CE12846C83900A8A6D8 /* MoviesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC87CDF2846C83900A8A6D8 /* MoviesCollectionViewCell.xib */; };
 		FAC87CE32846CD6400A8A6D8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC87CE22846CD6400A8A6D8 /* SearchViewController.swift */; };
+		FAC87CE52846DBF700A8A6D8 /* SearchMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC87CE42846DBF700A8A6D8 /* SearchMovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		FAC87CDE2846C83900A8A6D8 /* MoviesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewCell.swift; sourceTree = "<group>"; };
 		FAC87CDF2846C83900A8A6D8 /* MoviesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesCollectionViewCell.xib; sourceTree = "<group>"; };
 		FAC87CE22846CD6400A8A6D8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FAC87CE42846DBF700A8A6D8 /* SearchMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				FA918DD5284435860082A0D9 /* DataModel.swift */,
+				FAC87CE42846DBF700A8A6D8 /* SearchMovieModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				FA918DD928443A580082A0D9 /* MovieTopViewModel.swift in Sources */,
 				FAC87CD828468D6600A8A6D8 /* HometViewController.swift in Sources */,
 				FA918DD6284435860082A0D9 /* DataModel.swift in Sources */,
+				FAC87CE52846DBF700A8A6D8 /* SearchMovieModel.swift in Sources */,
 				FA8C26202845755D005D8148 /* Extension.swift in Sources */,
 				FAC87CD428464E8900A8A6D8 /* ApiService.swift in Sources */,
 				FAC87CDA2846ACC400A8A6D8 /* InTheatersMovieViewModel.swift in Sources */,
