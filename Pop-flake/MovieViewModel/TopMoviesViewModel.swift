@@ -15,7 +15,6 @@ class TopMoviesViewModel {
     private var topMovies = [Movies]()
     
     
-    
     func fetchTopMovies (completion : @escaping  ()->()) {
         let url = URL(string: UrlsApi.topMovieApi.rawValue)
         apiService.ftechData(url: url!) { [weak self] (result) in

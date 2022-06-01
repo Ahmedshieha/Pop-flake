@@ -13,7 +13,8 @@ class HomeViewController: UIViewController , UICollectionViewDataSource , UIColl
     let topMoviesViewModel = TopMoviesViewModel()
     let commingSoonViewModel = CommingSoonMoviesViewModel()
     let inTheatersViewModel = InTheatersMoviesViewModel()
-    
+    let boxOfficeViewModel = BoxOfficeViewModel()
+    let refreshControl = UIRefreshControl()
     let categoryHeaderId = "categoryHeaderId"
     let headerId = "headerId"
     
@@ -22,23 +23,30 @@ class HomeViewController: UIViewController , UICollectionViewDataSource , UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
         configureCollectionViewAndCells()
-//        loadtopMovies()
-//        loadcommingSoonMovies()
-//        loadinTheatersMovies()
-        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        checkInternet()
     }
     
-    func configureCollectionViewAndCells() {
-        
-        moviesCollectionView.collectionViewLayout = createCompostionalLayout()
-        moviesCollectionView.register(Header.self, forSupplementaryViewOfKind: categoryHeaderId, withReuseIdentifier: headerId)
-        self.moviesCollectionView.dataSource = self
-        self.moviesCollectionView.delegate = self
-        self.moviesCollectionView.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "collectioViewCell")
+    
+    func checkInternet () {
+        if Reachabilty.HasConnection() {
+            self.loadtopMovies()
+            self.loadcommingSoonMovies()
+            self.loadinTheatersMovies()
+            self.loadBoxOffice()
+        }
+        else {
+            print("no inetrnet")
+            let alert = UIAlertController(title: "Error", message: "No internet Connection", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .cancel)
+            alert.addAction(action)
+            self.present(alert ,animated: true)
+        }
     }
+  
     
     func loadtopMovies() {
         topMoviesViewModel.fetchTopMovies { [weak self] in
@@ -55,6 +63,12 @@ class HomeViewController: UIViewController , UICollectionViewDataSource , UIColl
             self?.moviesCollectionView.reloadData()
         }
         
+        
+    }
+    func loadBoxOffice() {
+        boxOfficeViewModel.fetchboxOffice { [weak self] in
+            self?.moviesCollectionView.reloadData()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -63,12 +77,16 @@ class HomeViewController: UIViewController , UICollectionViewDataSource , UIColl
         } else if section == 1 {
             return commingSoonViewModel.numberOfRowSection(section: section)
         }
+        if section == 2 {
+            return inTheatersViewModel.numberOfRowSection(section: section)
+        }
+        return boxOfficeViewModel.numberOfRowSection(section: section)
         
-        return inTheatersViewModel.numberOfRowSection(section: section)
+       
         
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -82,12 +100,17 @@ class HomeViewController: UIViewController , UICollectionViewDataSource , UIColl
             let movie = commingSoonViewModel.cellForRowAt(indexPath: indexPath)
             commingSoonCell.configureCell(movie)
             return commingSoonCell
-        }
+        } else if indexPath.section == 2 {
         let inTheatersCell  = collectionView.dequeueReusableCell(withReuseIdentifier: "collectioViewCell", for: indexPath) as! HomeCollectionViewCell
         let movie = inTheatersViewModel.cellForRowAt(indexPath: indexPath)
         inTheatersCell.configureCell(movie)
         return inTheatersCell
+        }
         
+        let boxOfficeCell  = collectionView.dequeueReusableCell(withReuseIdentifier: "moviesCollectionViewCell", for: indexPath) as! MoviesCollectionViewCell
+        let movie = boxOfficeViewModel.cellForRowAt(indexPath: indexPath)
+        boxOfficeCell.configure(movies: movie)
+        return boxOfficeCell
     }
     
     
@@ -108,6 +131,11 @@ class HomeViewController: UIViewController , UICollectionViewDataSource , UIColl
         let viewController = SFSafariViewController(url: URL(string: url)!)
         present(viewController , animated: true)
         }
+        else if indexPath.section == 3 {
+        let url = boxOfficeViewModel.didSelect(indexPath:indexPath)
+        let viewController = SFSafariViewController(url: URL(string: url)!)
+        present(viewController , animated: true)
+        }
         
     }
     
@@ -123,18 +151,38 @@ class HomeViewController: UIViewController , UICollectionViewDataSource , UIColl
              let commingSoonHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! Header
                  commingSoonHeader.lable.text = "Comming Soon"
              return commingSoonHeader
+
+
+         }
+         else if indexPath.section == 2 {
+         let inTheatersHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! Header
+                 inTheatersHeader.lable.text = "In Theaters"
+             return inTheatersHeader
          }
          
-         let inTheatersHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! Header
-             inTheatersHeader.lable.text = "In Theaters"
-         return inTheatersHeader
+         let boxOffice = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! Header
+             boxOffice.lable.text = "Top Grossing"
+         return boxOffice
          
          
          
     }
+    
+    func configureCollectionViewAndCells() {
+        
+        moviesCollectionView.collectionViewLayout = createCompostionalLayout()
+        moviesCollectionView.register(Header.self, forSupplementaryViewOfKind: categoryHeaderId, withReuseIdentifier: headerId)
+        self.moviesCollectionView.dataSource = self
+        self.moviesCollectionView.delegate = self
+        self.moviesCollectionView.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "collectioViewCell")
+        self.moviesCollectionView.register(UINib(nibName: "MoviesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "moviesCollectionViewCell")
+    }
     func createCompostionalLayout () -> UICollectionViewCompositionalLayout {
         
         return UICollectionViewCompositionalLayout {( sectionNumber , env ) -> NSCollectionLayoutSection? in
+            if sectionNumber == 3 {
+                return self.boxOfficemoviesLayoutSection()
+            }
             return self.movieCellLayout()
         }
         
@@ -153,13 +201,31 @@ class HomeViewController: UIViewController , UICollectionViewDataSource , UIColl
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior  = .groupPaging
         
-        section.boundarySupplementaryItems = [.init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50)) , elementKind  : categoryHeaderId , alignment : .top)]
+        section.boundarySupplementaryItems = [.init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50)) , elementKind  : categoryHeaderId , alignment : .top )]
+        section.contentInsets = .init(top: 5, leading: 20, bottom: 5, trailing: 5)
+        
+        
         return section
         
     }
-    
-    
-    
+    func boxOfficemoviesLayoutSection () -> NSCollectionLayoutSection {
+       let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        item.contentInsets = .init(top: 2, leading: 2, bottom: 2, trailing: 2)
+       let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.15))
+        
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        group.contentInsets = .init(top: 5 , leading: 5, bottom: 5, trailing: 5)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior  = .none
+        
+        section.boundarySupplementaryItems = [.init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50)) , elementKind  : categoryHeaderId , alignment : .top )]
+        section.contentInsets = .init(top: 5, leading: 20, bottom: 5, trailing: 5)
+        return section
+        
+    }
     
 }
 

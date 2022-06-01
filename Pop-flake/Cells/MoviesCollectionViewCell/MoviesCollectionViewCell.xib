@@ -22,22 +22,14 @@
                             <constraint firstAttribute="width" constant="90" id="Lwf-79-Nme"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKX-Zy-3kb">
-                        <rect key="frame" x="100" y="16" width="228" height="33"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iKX-Zy-3kb">
+                        <rect key="frame" x="100" y="88.5" width="228" height="33"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="33" id="DxS-6S-QLl"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="228" id="doP-tX-XF7"/>
                             <constraint firstAttribute="width" constant="228" id="xuE-Uv-mpL"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PF6-4k-h2W">
-                        <rect key="frame" x="100" y="161" width="228" height="33"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="33" id="5ou-PP-RUJ"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -47,17 +39,13 @@
             <constraints>
                 <constraint firstItem="iKX-Zy-3kb" firstAttribute="leading" secondItem="eaP-CL-cfp" secondAttribute="trailing" constant="5" id="9vh-vX-tzF"/>
                 <constraint firstItem="eaP-CL-cfp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Lvu-pQ-I7j"/>
+                <constraint firstItem="iKX-Zy-3kb" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="QU5-aB-FLI"/>
                 <constraint firstItem="eaP-CL-cfp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Zoy-JT-bAO"/>
-                <constraint firstItem="PF6-4k-h2W" firstAttribute="leading" secondItem="eaP-CL-cfp" secondAttribute="trailing" constant="5" id="dgG-r0-mHN"/>
-                <constraint firstItem="PF6-4k-h2W" firstAttribute="trailing" secondItem="iKX-Zy-3kb" secondAttribute="trailing" id="i1k-7V-S5Q"/>
                 <constraint firstAttribute="bottom" secondItem="eaP-CL-cfp" secondAttribute="bottom" constant="5" id="lQn-ZO-kdH"/>
-                <constraint firstItem="iKX-Zy-3kb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="meV-gm-MxJ"/>
-                <constraint firstAttribute="bottom" secondItem="PF6-4k-h2W" secondAttribute="bottom" constant="16" id="shf-XX-r3A"/>
             </constraints>
             <size key="customSize" width="353" height="210"/>
             <connections>
                 <outlet property="movieImageView" destination="eaP-CL-cfp" id="236-kc-eVj"/>
-                <outlet property="movieYear" destination="PF6-4k-h2W" id="alY-Rn-wY6"/>
                 <outlet property="titleMovieLable" destination="iKX-Zy-3kb" id="y7L-xT-bHK"/>
             </connections>
             <point key="canvasLocation" x="-307" y="92"/>

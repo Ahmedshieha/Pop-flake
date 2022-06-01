@@ -11,6 +11,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var MovieImageView: UIImageView!
     
+  
     override func awakeFromNib() {
         layer.cornerRadius = 10
         backgroundColor = .white

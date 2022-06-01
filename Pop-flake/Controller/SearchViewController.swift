@@ -10,11 +10,10 @@ import SafariServices
 
 class SearchViewController: UIViewController,UITextFieldDelegate , UICollectionViewDelegate , UICollectionViewDataSource {
     
-      var movies =  [SearchMovies]()
+      var movies =  [Movies]()
 
     @IBOutlet weak var searchTextFiels: UITextField!
     @IBOutlet weak var searchCollectionView: UICollectionView!
-    
     
     
     override func viewDidLoad() {
@@ -34,7 +33,8 @@ class SearchViewController: UIViewController,UITextFieldDelegate , UICollectionV
     
     @objc func searchMoviesTest (_ textField: UITextField) {
         self.movies.removeAll()
-        guard let url = URL(string: "https://imdb-api.com/en/API/SearchMovie/k_0jv5ry36/\(textField.text ?? "")") else {return}
+        guard let url = URL(string: "\(UrlsApi.serachApi.rawValue)\(textField.text ?? "")") else {return}
+        print(url)
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data , error == nil else {
                 return
@@ -54,11 +54,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate , UICollectionV
             self.movies.append(contentsOf: newMovies)
             
             DispatchQueue.main.async {
-                
-                for movie in self.movies {
-                    print(movie.title)
-                }
-                
+                self.searchCollectionView.reloadData()
             }
 
         }.resume()
@@ -66,10 +62,10 @@ class SearchViewController: UIViewController,UITextFieldDelegate , UICollectionV
         
     }
    
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        searchTextFiels.resignFirstResponder()
-//            return true
-//        }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchTextFiels.resignFirstResponder()
+            return true
+        }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -83,8 +79,11 @@ class SearchViewController: UIViewController,UITextFieldDelegate , UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let url = "https://www.imdb.com/title/\(movies[indexPath.row].id)/?ref_=nv_sr_srsg_0"
-        let viewController = SFSafariViewController(url:URL(string: url)!)
+        
+        
+        let url = "https://www.imdb.com/title/\(movies[indexPath.row].id!)/?ref_=nv_sr_srsg_0"
+        
+       let viewController = SFSafariViewController(url:URL(string: url)!)
         present(viewController ,animated: true)
     }
     

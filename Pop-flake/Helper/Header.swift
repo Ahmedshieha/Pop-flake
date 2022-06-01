@@ -15,7 +15,6 @@ class Header : UICollectionReusableView {
         super.init(frame: frame)
         //        lable.font = UIFont(name: "Apple SD Gothic Neo", size: 18)
         lable.font  = UIFont.boldSystemFont(ofSize: 25)
-        lable.textColor = .yellow
         addSubview(lable)
     }
     

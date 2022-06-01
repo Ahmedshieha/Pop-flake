@@ -10,18 +10,8 @@ import Foundation
 
 struct SearchData: Codable {
     let searchType, expression: String
-    let results: [SearchMovies]
+    let results: [Movies]
     let errorMessage: String
 }
 
-// MARK: - Result
-struct SearchMovies: Codable {
-    let id, resultType: String
-    let image: String
-    let title, resultDescription: String
 
-    enum CodingKeys: String, CodingKey {
-        case id, resultType, image, title
-        case resultDescription = "description"
-    }
-}

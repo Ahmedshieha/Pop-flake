@@ -17,22 +17,22 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pFy-xS-eJH">
-                        <rect key="frame" x="2" y="2" width="309" height="170"/>
+                        <rect key="frame" x="0.0" y="0.0" width="313" height="174"/>
                     </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="pFy-xS-eJH" secondAttribute="bottom" constant="2" id="gp3-az-5HW"/>
-                <constraint firstAttribute="trailing" secondItem="pFy-xS-eJH" secondAttribute="trailing" constant="2" id="gsG-3O-1sL"/>
-                <constraint firstItem="pFy-xS-eJH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="owI-dj-CJq"/>
-                <constraint firstItem="pFy-xS-eJH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="rgI-a6-yPh"/>
+                <constraint firstAttribute="trailing" secondItem="pFy-xS-eJH" secondAttribute="trailing" id="GGW-ln-0wP"/>
+                <constraint firstAttribute="bottom" secondItem="pFy-xS-eJH" secondAttribute="bottom" id="Tlb-wj-e1b"/>
+                <constraint firstItem="pFy-xS-eJH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eqK-XC-z5J"/>
+                <constraint firstItem="pFy-xS-eJH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gmq-35-ACz"/>
             </constraints>
             <size key="customSize" width="313" height="174"/>
             <connections>
                 <outlet property="MovieImageView" destination="pFy-xS-eJH" id="2pV-ED-poM"/>
             </connections>
-            <point key="canvasLocation" x="-131" y="40"/>
+            <point key="canvasLocation" x="-308" y="30"/>
         </collectionViewCell>
     </objects>
 </document>
