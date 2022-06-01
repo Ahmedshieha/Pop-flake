@@ -19,16 +19,9 @@ class SearchViewController: UIViewController,UITextFieldDelegate , UICollectionV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchTextFiels.delegate = self
-        searchCollectionView.delegate = self
-        searchCollectionView.dataSource = self
-        
-        searchTextFiels.layer.cornerRadius = 10
-        // Do any additional setup after loading the view.
-        self.searchCollectionView.register(UINib(nibName: "MoviesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "moviesCollectionViewCell")
-        searchTextFiels.addTarget(self, action: #selector(searchMoviesTest(_:)), for: .editingDidEnd)
-        searchCollectionView.collectionViewLayout = createCompostionalLayout()
+        configure()
     }
+    
     
     
     @objc func searchMoviesTest (_ textField: UITextField) {
@@ -112,5 +105,18 @@ class SearchViewController: UIViewController,UITextFieldDelegate , UICollectionV
         section.orthogonalScrollingBehavior  = .none
         
         return section
+    }
+    
+    
+    func configure () {
+        searchTextFiels.delegate = self
+        searchCollectionView.delegate = self
+        searchCollectionView.dataSource = self
+        
+        searchTextFiels.layer.cornerRadius = 10
+        // Do any additional setup after loading the view.
+        self.searchCollectionView.register(UINib(nibName: "MoviesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "moviesCollectionViewCell")
+        searchTextFiels.addTarget(self, action: #selector(searchMoviesTest(_:)), for: .editingDidEnd)
+        searchCollectionView.collectionViewLayout = createCompostionalLayout()
     }
 }

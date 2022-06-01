@@ -25,12 +25,12 @@ class HomeViewController: UIViewController , UICollectionViewDataSource , UIColl
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         configureCollectionViewAndCells()
-    }
-    override func viewDidAppear(_ animated: Bool) {
         checkInternet()
     }
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
     func checkInternet () {
         if Reachabilty.HasConnection() {
             self.loadtopMovies()
