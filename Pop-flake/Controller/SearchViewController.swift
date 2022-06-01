@@ -97,6 +97,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate , UICollectionV
     }
     
 }
+    
     func moviesLayoutSection () -> NSCollectionLayoutSection {
        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -111,7 +112,5 @@ class SearchViewController: UIViewController,UITextFieldDelegate , UICollectionV
         section.orthogonalScrollingBehavior  = .none
         
         return section
-        
     }
-
 }

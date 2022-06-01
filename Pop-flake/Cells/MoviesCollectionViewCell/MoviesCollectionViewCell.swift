@@ -49,6 +49,8 @@ class MoviesCollectionViewCell: UICollectionViewCell {
             DispatchQueue.main.async {
                 if let image = UIImage(data: data) {
                     self.movieImageView.image = image
+                } else {
+                    self.movieImageView.image = UIImage(named: "No-Image-Placeholder.svg")
                 }
             }
 

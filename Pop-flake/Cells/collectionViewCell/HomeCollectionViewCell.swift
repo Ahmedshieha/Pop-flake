@@ -9,13 +9,13 @@ import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var MovieImageView: UIImageView!
+    @IBOutlet weak var movieImageView: UIImageView!
     
   
     override func awakeFromNib() {
         layer.cornerRadius = 10
         backgroundColor = .white
-        MovieImageView.layer.cornerRadius = 10
+        movieImageView.layer.cornerRadius = 10
     }
     
     func updatUi(imageUrlString : String) {
@@ -23,7 +23,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         guard let imageUrl = URL(string: imageUrlString ) else {
             return
         }
-        self.MovieImageView.image = nil
+        self.movieImageView.image = nil
         getImageDataFrom(url: imageUrl)
     }
     
@@ -43,8 +43,12 @@ class HomeCollectionViewCell: UICollectionViewCell {
                 return
             }
             DispatchQueue.main.async {
+                
                 if let image = UIImage(data: data) {
-                    self.MovieImageView.image = image
+                    self.movieImageView.image = image
+                    
+                } else {
+                    self.movieImageView.image = UIImage(named: "No-Image-Placeholder.svg")
                 }
             }
 

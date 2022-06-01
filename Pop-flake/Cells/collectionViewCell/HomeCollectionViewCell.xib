@@ -30,7 +30,7 @@
             </constraints>
             <size key="customSize" width="313" height="174"/>
             <connections>
-                <outlet property="MovieImageView" destination="pFy-xS-eJH" id="2pV-ED-poM"/>
+                <outlet property="movieImageView" destination="pFy-xS-eJH" id="2pV-ED-poM"/>
             </connections>
             <point key="canvasLocation" x="-308" y="30"/>
         </collectionViewCell>
