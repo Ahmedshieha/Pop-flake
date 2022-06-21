@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 class MoviesCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var movieImageView: UIImageView!
@@ -24,7 +24,8 @@ class MoviesCollectionViewCell: UICollectionViewCell {
             return
         }
         self.movieImageView.image = nil
-        getImageDataFrom(url: imageUrl)
+//        getImageDataFrom(url: imageUrl)
+        kingFisherImage(url: imageUrl)
     }
     
     func configure(movies : Movies ) {
@@ -55,6 +56,30 @@ class MoviesCollectionViewCell: UICollectionViewCell {
             }
 
         }.resume()
+    }
+    
+    func kingFisherImage (url:URL) {
+        let processor = DownsamplingImageProcessor(size: movieImageView.bounds.size)
+                     |> RoundCornerImageProcessor(cornerRadius: 5)
+        movieImageView.kf.indicatorType = .activity
+        movieImageView.kf.setImage(
+            with: url,
+            placeholder: UIImage(named: "placeholderImage"),
+            options: [
+                .processor(processor),
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(1)),
+                .cacheOriginalImage
+            ])
+        {
+            result in
+            switch result {
+            case .success(let value):
+                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+            case .failure(let error):
+                print("Job failed: \(error.localizedDescription)")
+            }
+        }
     }
 
 }
