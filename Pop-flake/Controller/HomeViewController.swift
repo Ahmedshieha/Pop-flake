@@ -8,8 +8,11 @@
 import UIKit
 import SafariServices
 import AVFoundation
+import NVActivityIndicatorView
 class HomeViewController: UIViewController , UICollectionViewDataSource , UICollectionViewDelegate {
     
+    
+
     let topMoviesViewModel = TopMoviesViewModel()
     let commingSoonViewModel = CommingSoonMoviesViewModel()
     let inTheatersViewModel = InTheatersMoviesViewModel()
@@ -17,6 +20,7 @@ class HomeViewController: UIViewController , UICollectionViewDataSource , UIColl
     let refreshControl = UIRefreshControl()
     let categoryHeaderId = "categoryHeaderId"
     let headerId = "headerId"
+    var indictor : NVActivityIndicatorView?
     
     @IBOutlet weak var moviesCollectionView: UICollectionView!
     
@@ -26,17 +30,31 @@ class HomeViewController: UIViewController , UICollectionViewDataSource , UIColl
         // Do any additional setup after loading the view.
         configureCollectionViewAndCells()
         checkInternet()
+        indictor = NVActivityIndicatorView(frame: CGRect(x: self.view.frame.width / 2 - 30, y: self.view.frame.height / 2 - 30, width: 60, height: 60), type: .lineSpinFadeLoader, color: .gray, padding: .none)
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
     }
+    
+    func showIndicator() {
+        if indictor != nil {
+            self.view.addSubview(indictor!)
+            indictor!.startAnimating()
+        }
+    }
+    func stopIndicator() {
+        if indictor != nil {
+            self.view.addSubview(indictor!)
+            indictor!.stopAnimating()
+        }
+    }
+    
     func checkInternet () {
         if Reachabilty.HasConnection() {
-            self.loadtopMovies()
-            self.loadcommingSoonMovies()
-            self.loadinTheatersMovies()
-            self.loadBoxOffice()
+            showAllData()
         }
         else {
             print("no inetrnet")
@@ -46,11 +64,20 @@ class HomeViewController: UIViewController , UICollectionViewDataSource , UIColl
             self.present(alert ,animated: true)
         }
     }
+    
+    func showAllData () {
+        self.loadtopMovies()
+        self.loadcommingSoonMovies()
+        self.loadinTheatersMovies()
+        self.loadBoxOffice()
+    }
   
     
     func loadtopMovies() {
+        
         topMoviesViewModel.fetchTopMovies { [weak self] in
             self?.moviesCollectionView.reloadData()
+            
         }
     }
     func loadcommingSoonMovies() {
